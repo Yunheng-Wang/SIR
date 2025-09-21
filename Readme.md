@@ -19,7 +19,7 @@ DataSet/
 
 
 
-## 📌 Network Collection List (by ..)
+## 📌 Network Collection List
 Here we list some websites containing real-world networks. When all networks from a website are processed, the progress will be marked with ✅.  
           
 | Website  | Progress |

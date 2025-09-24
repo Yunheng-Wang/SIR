@@ -1,12 +1,12 @@
 ## ✨ How to Use ?
 
 ### 1️⃣ Configure Environment (Linux / macOS)
-1. **Clone the repository**
+Clone the repository
    ```bash
    git clone https://github.com/Yunheng-Wang/SIR.git
    cd SIR
    ```
-2. **Create the virtual environment**
+Create the virtual environment
    ```bash
    python -m venv sir
    source sir/bin/activate

@@ -36,19 +36,23 @@ If you want to monitor CPU usage in real time, open another terminal and run:
 sudo apt install btop   
 btop 
 ```
+All generated result files will be stored in the **`DataSet/`** directory.
 
 ## 📌 Network Collection List
 Here we list some websites containing real-world networks. When all networks from a website are processed, the progress will be marked with ✅.  
           
 | Website  | Progress |
 |--------------------------------------------------------|---|
+| https://networkrepository.com/index.php  |❌|
 | http://www.diag.uniroma1.it/challenge9/download.shtml  |❌|
 
 
 
 
-
 ## 📌 Task List
+| Website                                | Num | Preprocessing | Progress |
+|----------------------------------------|-----|---------------|----------|
+| https://networkrepository.com/asn.php  | 816 | ✅            | ❌       |
 
 
 

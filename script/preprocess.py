@@ -85,5 +85,5 @@ def process_all(root_folder):
             process_directory(a_dir)
 
 if __name__ == "__main__":
-    folder = "/home/dreams/Users/yunhengwang/DataSet_SIR/Brain_Networks"
+    folder = "/home/dreams/Users/yunhengwang/DataSet_SIR/Inside/Miscellaneous_Networks"
     process_all(folder)

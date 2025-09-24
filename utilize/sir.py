@@ -57,5 +57,5 @@ def SIR(G, beta, gamma, trials):
         mean = sir_node(G, beta, gamma, u, trials)
         details[u] = {"mean": mean}
     
-    return sorted(((u, details[u]["mean"]) for u in nodes), key=lambda x: x[1], reverse=True)
+    return dict(sorted(((u, details[u]["mean"]) for u in nodes), key=lambda x: x[1], reverse=True))
 

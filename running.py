@@ -1,26 +1,29 @@
 import os
+from tqdm import tqdm
 
 
 from utilize.sir import SIR
-from utilize.loader import Graph,load_config
+from utilize.loader import Graph, load_config, load_betas
+from utilize.tool import name_to_path
+from utilize.save import save_json, save_networks, create_folder
+from tqdm import tqdm
 
 
-def main(path):
+config = load_config("./config.yaml")
 
-    config = load_config("./config.yaml")
+networks = os.listdir(config["base"]["networks_path"])
 
-    for name in os.listdir(path):
+for network_name in tqdm(networks, desc="Networks", unit="net"):
 
-        folder = os.path.join(path, name)
-        f = os.listdir(folder)[0]
-        file_path = os.path.join(folder, f)
+    network_path = name_to_path(network_name, config["base"]["networks_path"])
 
-        G = Graph(file_path)
-        print(config)
-        break
-        
+    G = Graph(network_path)
 
+    betas = load_betas(G, config)
 
+    target_folder, base_name = create_folder(config["base"]["save_path"], network_path)
 
-main("/home/dreams/Users/yunhengwang/DataSet_SIR/Networks/Animal_Social_Networks")
-
+    for beta in tqdm(betas, desc=f"Betas for {network_name}", leave=False, unit="β"):
+        results = SIR(G, beta, config["training"]["gamma"], config["training"]["trials"])
+        save_json(target_folder, results, base_name, beta)
+        save_networks(network_path, target_folder)

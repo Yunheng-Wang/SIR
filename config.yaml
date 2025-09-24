@@ -1,9 +1,9 @@
-
-
 training:
   beta: [0.8, 0.9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   gamma: 1
   trials: 1000
 
 
-
+base:
+  save_path: "./DataSet"
+  networks_path: "./Networks"

@@ -41,6 +41,6 @@ def extract_all_in_folder(folder_path):
 
 
 if __name__ == "__main__":
-    folder = "/home/dreams/Users/yunhengwang/DataSet_SIR/Brain_Networks"  # 修改为你的目标文件夹路径
+    folder = "/home/dreams/Users/yunhengwang/DataSet_SIR/Inside/Network/Miscellaneous Networks"  # 修改为你的目标文件夹路径
     extract_all_in_folder(folder)
 

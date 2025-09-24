@@ -11,7 +11,11 @@ from tqdm import tqdm
 
 config = load_config("./config.yaml")
 
-networks = os.listdir(config["base"]["networks_path"])
+base_path = config["base"]["networks_path"]
+networks = [
+    name for name in os.listdir(base_path)
+    if os.path.isdir(os.path.join(base_path, name))
+]
 
 for network_name in tqdm(networks, desc="Networks", unit="net"):
 

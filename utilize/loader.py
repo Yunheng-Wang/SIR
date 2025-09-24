@@ -2,7 +2,8 @@ import yaml
 import networkx as nx
 import os
 
-from utilize.tool import beta_threshold, network_critical
+from utilize.tool import beta_threshold
+
 
 def load_betas(G, config):
     crit = beta_threshold(G)

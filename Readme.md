@@ -9,7 +9,7 @@
 ```bash
 DataSet/
 ├── 19c615efc244c7e/        
-│   ├── Network.txt         # Network Graph
+│   ├── Network.json         # Network Graph
 │   ├── Result.json         # 
 │   └── Overview.json
 └──  

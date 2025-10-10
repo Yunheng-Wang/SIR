@@ -30,4 +30,5 @@ for network_name in tqdm(networks, desc="Networks", unit="net"):
     for beta in tqdm(betas, desc=f"Betas for {network_name}", leave=False, unit="β"):
         results = SIR(G, beta, config["training"]["gamma"], config["training"]["trials"])
         save_json(target_folder, results, base_name, beta)
-        save_networks(network_path, target_folder)
+    
+    save_networks(network_path, target_folder)

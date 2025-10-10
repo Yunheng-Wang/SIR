@@ -19,6 +19,9 @@ networks = [
 
 for network_name in tqdm(networks, desc="Networks", unit="net"):
 
+    if os.path.exists(os.path.join(config["base"]["save_path"], network_name, f"{network_name}.txt")):        
+        continue
+
     network_path = name_to_path(network_name, config["base"]["networks_path"])
 
     G = Graph(network_path)

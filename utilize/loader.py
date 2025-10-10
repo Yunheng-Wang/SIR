@@ -47,4 +47,5 @@ def Graph(path):
             edges.append((a, b))
     G = nx.Graph()
     G.add_edges_from(edges)
+    G.remove_edges_from(nx.selfloop_edges(G))
     return G
